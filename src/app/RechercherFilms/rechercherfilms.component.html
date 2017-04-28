@@ -1,0 +1,13 @@
+<h1>Rentrez un titre de film:</h1>
+<input [(ngModel)]="rechercheString" type="text" />
+<button (click)="rechercher()">Recherche</button>
+<ul *ngIf="listeShadow !== ''">
+  <li *ngFor="let item of listeFilms">
+    <img  [src]="item.Poster">
+    <p [ngClass]="{'ital': filmDetails.Year < 1990}"> {{item.Title}}</p>
+    <h2> {{item.Year}}</h2>
+    <p>rechercheString</p>
+  </li>
+</ul>
+
+<!--<li *ngFor="let item of listeFilms">-->
